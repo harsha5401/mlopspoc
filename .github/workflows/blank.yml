@@ -4,7 +4,9 @@ name: CI
 on:
 
   workflow_dispatch:
-
+permissions:
+  id-token: write
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,12 +18,13 @@ jobs:
         run: echo Hello, world
       - name: Azure Login
         uses: azure/login@v1
+       
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          # allow-no-subscriptions: true
-          enable-AzPSSession: true
+          allow-no-subscriptions: true
+          
       # - uses: hashicorp/setup-terraform@v3
       # - name: Terraform Init
       #   run: terraform init
