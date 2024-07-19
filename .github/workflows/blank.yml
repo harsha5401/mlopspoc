@@ -18,13 +18,14 @@ jobs:
         run: echo Hello, world
       - name: Azure Login
         uses: azure/login@v1
-       
+        
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           allow-no-subscriptions: true
-          
+      - name: azlogin
+        run: az login  
       - uses: hashicorp/setup-terraform@v3
         # env:
         #  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
