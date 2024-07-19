@@ -13,5 +13,5 @@ variable "location" {
 variable "ml" {
   type        = string
   description = "name of Ml workspace"
-  default     = "ml"
+  default     = "ml19july"
 }
