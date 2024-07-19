@@ -24,8 +24,12 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           allow-no-subscriptions: true
-      - name: azlogin
-        run: az login  
+      - name: Azure CLI script
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az account show 
       - uses: hashicorp/setup-terraform@v3
         # env:
         #  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
