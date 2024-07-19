@@ -1,7 +1,7 @@
 variable "rgname" {
   type        = string
   description = "Name rg group"
-  default     = "RGNAMEmlops19july"
+  default     = "RGNAMEmlops20july"
 }
 
 variable "location" {
@@ -13,5 +13,5 @@ variable "location" {
 variable "ml" {
   type        = string
   description = "name of Ml workspace"
-  default     = "ml19july"
+  default     = "ml20july"
 }
