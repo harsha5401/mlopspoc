@@ -7,7 +7,7 @@ client_secret = "TQP8Q~j8_tPEe_UOvxPOY1Y50YESBQHGMdHP.cJB"
 tenant_id = "c1d226ed-7a22-492c-a89e-50154dcb92fe"
 }
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "default" {
   name     = var.rgname
   location = var.location
 }
