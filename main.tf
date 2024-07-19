@@ -29,8 +29,8 @@ resource "azurerm_key_vault" "default" {
 
 resource "azurerm_storage_account" "default" {
   name                            = "${var.ml}st"
-  location                        = "${var.rgname}"
-  resource_group_name             = "${var.location}"
+  location                        = "${var.location}"
+  resource_group_name             = "${var.rgname}"
   account_tier                    = "Standard"
   account_replication_type        = "GRS"
   allow_nested_items_to_be_public = false
