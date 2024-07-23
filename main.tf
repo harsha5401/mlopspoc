@@ -1,10 +1,5 @@
 terraform {
-  backend "azurerm" {
-    storage_account_name = "myterraformstorageaccount"
-    container_name       = "tfstate"
-    key                  = "terraform.tfstate"
-    resource_group_name  = "RGNAMEmlops20july"
-  }
+  
 }
 provider "azurerm" {
   features {}
