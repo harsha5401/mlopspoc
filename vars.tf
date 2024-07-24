@@ -1,7 +1,7 @@
 variable "rgname" {
   type        = string
   description = "Name rg group"
-  default     = "RGNAMEmlops20july"
+  default     = "mlops_learning"
 }
 
 variable "location" {
