@@ -20,7 +20,7 @@ resource "azurerm_key_vault" "default" {
   name                     = "${var.ml}kv"
   location                 = var.location
   resource_group_name      = var.rgname
- // tenant_id                = "93f33571-550f-43cf-b09f-cd331338d086"
+  tenant_id                = "93f33571-550f-43cf-b09f-cd331338d086"
   sku_name                 = "premium"
   purge_protection_enabled = false
 }
