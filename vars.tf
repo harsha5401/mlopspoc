@@ -13,9 +13,10 @@ variable "location" {
 variable "ml" {
   type        = string
   description = "name of Ml workspace"
-  default     = "ml24july"
+  default     = "mlterraform24july"
 }
 variable "tenant_id" {
   type        = string
   description = "The Tenant ID to use for this Key Vault."
+  default  = "93f33571-550f-43cf-b09f-cd331338d086"
 }
