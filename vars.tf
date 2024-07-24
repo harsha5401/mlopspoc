@@ -15,3 +15,7 @@ variable "ml" {
   description = "name of Ml workspace"
   default     = "ml24july"
 }
+variable "tenant_id" {
+  type        = string
+  description = "The Tenant ID to use for this Key Vault."
+}
